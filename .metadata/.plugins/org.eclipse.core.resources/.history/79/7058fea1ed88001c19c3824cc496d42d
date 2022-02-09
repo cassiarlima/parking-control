@@ -1,0 +1,17 @@
+package com.api.parkingcontrol.service;
+
+
+import org.springframework.stereotype.Service;
+
+import com.api.parkingcontrol.repository.ParkingSpotRepository;
+
+@Service
+public class ParkingSpotService {
+	
+	final ParkingSpotRepository parkingSpotRepository; //para não colocar a injeção de dependencia AutoWired, é possível criar um construtor
+	
+	public ParkingSpotService(ParkingSpotRepository parkingSpotRepository) {
+		this.parkingSpotRepository = parkingSpotRepository;
+	}
+
+}
